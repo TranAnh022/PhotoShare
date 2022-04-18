@@ -4,11 +4,21 @@ import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'
 import shareVideo from '../asset/share.mp4'
 import logo from '../asset/logowhite.png'
+
+
 const Login = () => {
 
   const responseGoogle = (response) => {
-    
+    localStorage.setItem('user', JSON.stringify(response.profileObj))
+    const {name, googleId, imageUrl} = response.profileObj
+    const doc = {
+      _id: googleId,
+      _type: 'user', //using underscore for sanity to know which doc we creating in this case "user"
+      userName: name,
+      image:imageUrl,
+    }
   }
+
   return (
     <div className='flex justify-start items-center flex-col h-screen'>
       <div className='relative w-full h-full'>
@@ -28,7 +38,7 @@ const Login = () => {
           </div>
           <div className="">
             <GoogleLogin
-              clientId=''
+              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
               render={(renderProps) => (
                 <button
                   type='button'
