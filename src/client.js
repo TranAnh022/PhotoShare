@@ -1,6 +1,11 @@
 import sanityClient from '@sanity/client';
 import imageUrlBuilder from "@sanity/image-url"
 
+//to create project-id and token
+//access to backend folder and run "sanity manage"
+//choose API section and create new one
+
+
 export const client = sanityClient({
     projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
     dataset: 'production',
