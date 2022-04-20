@@ -6,6 +6,7 @@ import imageUrlBuilder from "@sanity/image-url"
 //choose API section and create new one
 
 
+//this client function to pull the data from database(sanity)
 export const client = sanityClient({
     projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
     dataset: 'production',
