@@ -11,8 +11,8 @@ const categories = [
   { name: 'Animal' },
   { name: 'Wallpaper' },
   { name: 'Car' },
-  { name: 'Mobike' },
-  { name: 'Natural' },
+  { name: 'Phone' },
+  { name: 'Nature' },
   {name: 'Other'}
 ]
 
