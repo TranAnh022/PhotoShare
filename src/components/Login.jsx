@@ -43,7 +43,7 @@ const Login = () => {
           <div className='p-5'>
             <img src={logo} width="130px" alt="logo" />
           </div>
-          <div className="">
+          <div className="shadow-2xl">
             <GoogleLogin
               clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
               render={(renderProps) => (

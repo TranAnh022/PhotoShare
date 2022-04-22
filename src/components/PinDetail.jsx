@@ -95,7 +95,7 @@ const PinDetail = ({ user }) => {
               target="_blank"
               rel="noreferrer"
             >
-              {pinDetail.destination}
+              {pinDetail.destination.length > 15 ? pinDetail.destination.slice(0,15) : pinDetail.destination}
             </a>
         </div>
         <div>
