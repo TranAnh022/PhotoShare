@@ -60,7 +60,7 @@ const CreatePin = ({user}) => {
           _type: 'postedBy',
           _ref:user._id,
         },
-        category: category,
+        category,
       }
 
       client.create(doc)
